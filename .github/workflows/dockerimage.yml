@@ -13,4 +13,4 @@ jobs:
       with:
         submodules: true
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag tsuyoshicho-textlint:$(date +%s)
+      run: docker build . --file Dockerfile --tag tsuyoshicho-redpen:$(date +%s)
