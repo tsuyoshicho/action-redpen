@@ -1,0 +1,30 @@
+name: 'Run redpen with reviewdog'
+description: 'Run redpen with reviewdog on pull requests to improve document writing experience.'
+author: 'Tsuyoshi CHO <Tsuyoshi.CHO+develop@Gmail.com>'
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN.'
+    required: true
+  level:
+    description: 'Report level for reviewdog [info,warning,error]'
+    default: 'error'
+  reporter:
+    description: |
+      Reporter of reviewdog command [github-pr-check,github-pr-review].
+      Default is github-pr-check.
+      github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
+    default: 'github-pr-check'
+  redpen_flags:
+    description: "flags and args of redpen command. Default: '.'"
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
+    - ${{ inputs.level }}
+    - ${{ inputs.reporter }}
+    - ${{ inputs.redpen_flags }}
+branding:
+  icon: 'alert-octagon'
+  color: 'blue'
