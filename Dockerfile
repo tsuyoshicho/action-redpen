@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM alpine:3.10
 
 ENV REDPEN_VERSION 1.10.1
 
