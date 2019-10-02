@@ -9,6 +9,8 @@ jobs:
         with:
           submodules: true
       - uses: actions/setup-java@v1
+        with:
+          java-version: '9.0.4'
       - name: redpen-github-pr-check
         uses: tsuyoshicho/action-redpen@v1
         with:
