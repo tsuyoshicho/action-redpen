@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM openjdk:12-alpine
 
 ENV REDPEN_VERSION 1.10.1
 
