@@ -7,21 +7,22 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
+          ref: 'test/review2'
           submodules: true
       - name: redpen-github-pr-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/review2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
           redpen_flags: "doc/**"
       - name: redpen-github-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/review2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
           redpen_flags: "doc/**"
       - name: redpen-github-pr-review
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/review2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
