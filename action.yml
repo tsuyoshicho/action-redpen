@@ -16,9 +16,13 @@ inputs:
       github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
     default: 'github-pr-check'
     required: false
-  redpen_flags:
-    description: "flags and args of redpen command. Default: '.'"
+  basedir:
+    description: "document basedir. Default: '.'"
     default: '.'
+    required: false
+  targets:
+    description: "document files. Default: '*'"
+    default: '*'
     required: false
 runs:
   using: 'docker'
@@ -27,7 +31,8 @@ runs:
     - ${{ inputs.github_token }}
     - ${{ inputs.level }}
     - ${{ inputs.reporter }}
-    - ${{ inputs.redpen_flags }}
+    - ${{ inputs.basedir }}
+    - ${{ inputs.targets }}
 branding:
   icon: 'alert-octagon'
   color: 'blue'
