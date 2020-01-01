@@ -14,6 +14,12 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
           redpen_flags: "doc"
+      - name: redpen-github-check
+        uses: tsuyoshicho/action-redpen@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          redpen_flags: "doc"
       - name: redpen-github-pr-review
         uses: tsuyoshicho/action-redpen@master
         with:
