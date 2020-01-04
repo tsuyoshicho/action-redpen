@@ -9,21 +9,21 @@ jobs:
         with:
           submodules: true
       - name: redpen-github-pr-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/tempfix-test
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
           basedir: "doc"
           targets: "*.md"
       - name: redpen-github-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/tempfix-test
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
           basedir: "doc"
           targets: "*.md"
       - name: redpen-github-pr-review
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@test/tempfix-test
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
