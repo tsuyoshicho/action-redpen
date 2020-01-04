@@ -10,7 +10,7 @@ RUN curl -sfL https://ci.appveyor.com/api/buildjobs/8tqt2j4gccbo1i0y/artifacts/r
     tar xvfp redpen-${REDPEN_VERSION}.tar.gz -C / && \
     rm *.tar.gz
 
-ENV PATH="/redpen-distribution-${REDPEN_VERSION}/bin:${PATH}"
+ENV PATH="/redpen-distribution-1.10.4-SNAPSHOT/bin:${PATH}"
 
 COPY entrypoint.sh /entrypoint.sh
 
