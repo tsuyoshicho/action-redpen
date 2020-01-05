@@ -2,11 +2,15 @@ FROM openjdk:12-alpine
 
 ENV REDPEN_VERSION 1.10.4
 
-RUN apk --update add git curl && \
+RUN apk --update add git curl jq wget && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ v0.9.14
-RUN curl -sfLO https://github.com/redpen-cc/redpen/releases/download/redpen-${REDPEN_VERSION}/redpen-${REDPEN_VERSION}.tar.gz && \
+RUN curl -sL https://api.github.com/repos/redpen-cc/redpen/releases/tags/redpen-${REDPEN_VERSION} -o - \
+      | jq -r .assets[].browser_download_url \
+      | grep -i "tar.gz" \
+      | head -n 1 \
+      | wget -qi - -O redpen-${REDPEN_VERSION}.tar.gz && \
     tar xvfp redpen-${REDPEN_VERSION}.tar.gz -C / && \
     rm *.tar.gz
 
