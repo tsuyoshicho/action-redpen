@@ -1,6 +1,6 @@
 FROM openjdk:12-alpine
 
-ENV REDPEN_VERSION 1.10.3
+ENV REDPEN_VERSION 1.10.4
 
 RUN apk --update add git curl && \
     rm -rf /var/lib/apt/lists/* && \
