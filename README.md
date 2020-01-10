@@ -36,11 +36,12 @@ github-pr-review can use Markdown and add a link to rule page in reviewdog repor
 
 ### `basedir`
 
-redpen target document base directory (i.e. `doc*`)
+redpen target document base directory (i.e. `doc`)
 
 ### `targets`
 
 redpen target file glob (i.e. `*.md`)
+Search recursively.
 
 ### `config`
 
