@@ -15,6 +15,7 @@ jobs:
           reporter: github-pr-check
           basedir: "doc"
           targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
       - name: redpen-github-check
         uses: tsuyoshicho/action-redpen@master
         with:
@@ -22,6 +23,7 @@ jobs:
           reporter: github-check
           basedir: "doc"
           targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
       - name: redpen-github-pr-review
         uses: tsuyoshicho/action-redpen@master
         with:
@@ -29,3 +31,4 @@ jobs:
           reporter: github-pr-review
           basedir: "doc"
           targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
