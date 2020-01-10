@@ -24,6 +24,10 @@ inputs:
     description: "document files. Default: '*'"
     default: '*'
     required: false
+  config:
+    description: "config file path. Default: 'config/redpen-conf-ja.xml'"
+    default: '*'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -33,6 +37,7 @@ runs:
     - ${{ inputs.reporter }}
     - ${{ inputs.basedir }}
     - ${{ inputs.targets }}
+    - ${{ inputs.config }}
 branding:
   icon: 'alert-octagon'
   color: 'blue'
