@@ -5,7 +5,7 @@ ENV REDPEN_VERSION 1.10.4
 RUN apk --update add git curl jq wget && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
-RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ v0.9.14
+RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ v0.9.16
 RUN curl -sL https://api.github.com/repos/redpen-cc/redpen/releases/tags/redpen-${REDPEN_VERSION} -o - \
       | jq -r .assets[].browser_download_url \
       | grep -i "tar.gz" \
