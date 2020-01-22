@@ -1,6 +1,6 @@
 FROM openjdk:12-alpine
 
-ENV REDPEN_VERSION=1.10.4
+ENV REDPEN_VERSION=redpen-1.10.4
 ENV REVIEWDOG_VERSION=v0.9.16
 RUN apk --update add git curl jq wget && \
     rm -rf /var/lib/apt/lists/* && \
