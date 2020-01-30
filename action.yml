@@ -25,8 +25,8 @@ inputs:
     default: '*'
     required: false
   config:
-    description: "config file path. Default: 'config/redpen-conf-ja.xml'"
-    default: '*'
+    description: "config file path. Default(inner value): 'config/redpen-conf-en.xml'"
+    default: 'config/redpen-conf-en.xml'
     required: false
 runs:
   using: 'docker'

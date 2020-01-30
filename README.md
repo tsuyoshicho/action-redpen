@@ -45,7 +45,7 @@ Search recursively.
 
 ### `config`
 
-redpen config file path (i.e. `config/redpen-conf-ja.xml`)
+redpen config file path (i.e. `config/redpen-conf-en.xml`)
 
 ## Example usage
 
