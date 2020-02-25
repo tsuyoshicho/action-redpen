@@ -3,7 +3,7 @@
 [![Docker Image CI](https://github.com/tsuyoshicho/action-redpen/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/tsuyoshicho/action-redpen/actions)
 [![Release](https://github.com/tsuyoshicho/action-redpen/workflows/release/badge.svg)](https://github.com/tsuyoshicho/action-redpen/releases)
 
-This action runs [redpen](https://github.com/redpen/redpen) with
+This action runs [redpen](https://github.com/redpen-cc/redpen) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
 text review experience.
 
