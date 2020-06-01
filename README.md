@@ -59,7 +59,7 @@ jobs:
     name: runner / redpen
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           submodules: true
       - name: redpen-github-pr-check
