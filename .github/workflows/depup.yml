@@ -1,7 +1,9 @@
 name: depup
 on:
   schedule:
-    - cron: '35 9 * * *'
+    - cron: '35 9 * * *' # Runs at 9:35 UTC every day
+  repository_dispatch:
+    types: [depup]
 
 jobs:
   depup-reviewdog:
