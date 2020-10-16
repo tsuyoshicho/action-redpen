@@ -1,7 +1,7 @@
 FROM openjdk:12-alpine
 
 # redpen
-ENV REDPEN_VERSION=1.10.3
+ENV REDPEN_VERSION=1.10.4
 
 # reviewdog
 ENV REVIEWDOG_VERSION=v0.10.2
