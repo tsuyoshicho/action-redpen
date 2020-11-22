@@ -10,7 +10,7 @@ jobs:
         with:
           submodules: true
       - name: redpen-github-pr-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
@@ -18,7 +18,7 @@ jobs:
           targets: "*.md"
           config: "config/redpen-conf-ja.xml"
       - name: redpen-github-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
@@ -26,7 +26,7 @@ jobs:
           targets: "*.md"
           config: "config/redpen-conf-ja.xml"
       - name: redpen-github-pr-review
-        uses: tsuyoshicho/action-redpen@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
