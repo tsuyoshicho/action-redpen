@@ -1,0 +1,59 @@
+name: Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  test-check:
+    name: runner / redpen (github-check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: redpen-github-check
+        uses: ./
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
+
+  test-pr-check:
+    if: github.event_name == 'pull_request'
+    name: runner / redpen (github-pr-check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: redpen-github-check
+        uses: ./
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
+
+  test-pr-review:
+    if: github.event_name == 'pull_request'
+    name: runner / redpen (github-pr-review)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: redpen-github-pr-review
+        uses: ./
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
