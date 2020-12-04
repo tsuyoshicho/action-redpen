@@ -68,3 +68,4 @@ jobs:
 
           base: master
           labels: "bump:minor"
+
