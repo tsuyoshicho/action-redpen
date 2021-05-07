@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM openjdk:12-alpine
 
 # redpen
 ENV REDPEN_VERSION=1.10.4
