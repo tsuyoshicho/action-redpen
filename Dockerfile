@@ -4,7 +4,7 @@ FROM openjdk:18-alpine
 ENV REDPEN_VERSION=1.10.4
 
 # reviewdog
-ENV REVIEWDOG_VERSION=v0.13.0
+ENV REVIEWDOG_VERSION=v0.13.1
 
 RUN apk --update add git curl jq wget && \
     rm -rf /var/lib/apt/lists/* && \
