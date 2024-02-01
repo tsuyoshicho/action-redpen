@@ -12,7 +12,7 @@ RUN apk add --no-cache git jq wget && \
 # hadolint ignore=DL4006
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
 # hadolint ignore=DL4006
-RUN wget https://api.github.com/repos/redpen-cc/redpen/releases/tags/redpen-${REDPEN_VERSION} \
+RUN wget -O - -q https://api.github.com/repos/redpen-cc/redpen/releases/tags/redpen-${REDPEN_VERSION} \
       | jq -r .assets[].browser_download_url \
       | grep -i "tar.gz" \
       | head -n 1 \
