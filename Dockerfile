@@ -18,7 +18,7 @@ RUN wget -O - -q https://api.github.com/repos/redpen-cc/redpen/releases/tags/red
       | head -n 1 \
       | wget -qi - -O redpen-${REDPEN_VERSION}.tar.gz && \
     tar xvfp redpen-${REDPEN_VERSION}.tar.gz -C / && \
-    rm -- *.tar.gz && \
+    rm redpen-${REDPEN_VERSION}.tar.gz && \
     find . -maxdepth 1 -type d -name "redpen*" -print0 | xargs -0 -I{} mv {} redpen
 
 ENV PATH="/redpen/bin:${PATH}"
