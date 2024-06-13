@@ -4,7 +4,7 @@ FROM openjdk:19-alpine
 ENV REDPEN_VERSION=1.10.4
 
 # reviewdog
-ENV REVIEWDOG_VERSION=v0.17.4
+ENV REVIEWDOG_VERSION=v0.17.5
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache git jq wget && \
