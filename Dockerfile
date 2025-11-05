@@ -1,4 +1,4 @@
-FROM eclipse-temurin:19-jre-alpine
+FROM eclipse-temurin:19-jre-alpine@sha256:939a30c2e2eb4300ab19bde2c180b74520884aa2639405d0b87b66752c34d213
 
 # redpen
 ENV REDPEN_VERSION=1.10.4
