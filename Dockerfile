@@ -4,7 +4,7 @@ FROM eclipse-temurin:25.0.4_7-jre-alpine@sha256:2ca9adf44f5c29d28ecd26cf92d75cc0
 ENV REDPEN_VERSION=1.10.4
 
 # reviewdog
-ENV REVIEWDOG_VERSION=v0.21.1
+ENV REVIEWDOG_VERSION=v0.21.2
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache git jq wget && \
