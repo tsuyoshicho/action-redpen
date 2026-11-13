@@ -19,7 +19,7 @@ jobs:
           submodules: true
 
       - name: Check depup
-        uses: reviewdog/action-depup/with-pr@94a1aaf4e4923064019214b48a43276218af7ad5 # v1.6.4
+        uses: reviewdog/action-depup/with-pr@a03fa2103b273193becba8cca43a992b9173f5dc # v1.6.7
         id: depup
         with:
           file: Dockerfile
